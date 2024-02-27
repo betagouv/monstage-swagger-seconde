@@ -13,39 +13,43 @@ security:
 - bearerAuth: []
 tags:
 - name: developers
-  description: Operations accessibles aux développeurs disposant d'une clé API. Celle-ci
-    peut être fournie sur demande à l'adresse email xxxxxxxx
+  description: Operations accessibles aux développeurs disposant d'une clé API. Celle-ci peut être fournie sur demande à l'adresse email xxxxxxxx
 paths:
   /internship_offers:
     get:
       tags:
-      - developers
+        - developers
       summary: liste (index) les offres déposées
+      operationId: internship_offers_index
+      security:
+        - bearerAuth: []
       description: |
         Les offres retournées sont celles qui ont été déposées par le partenaire de Mon stage de seconde.fr
-      operationId: internship_offers_index
       responses:
-        "200":
+        '200':
           description: Offre de stage créée
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/InternshipOffers'
-        "401":
-          description: l'authentification a échoué
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/inline_response_401'
-        "404":
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '404':
           description: Un argument de la requête fait échouer la requête.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_404_1'
-      security:
-      - bearerAuth: []
-      x-swagger-router-controller: Developers
+                type: object
+                properties:
+                  code:
+                    type: string
+                    example: "NOT_FOUND"
+                  error:
+                    type: string
+                    example: "can't find internship_offer with this remote_id"
+                  status:
+                    type: string
+                    example: "not_found"
     post:
       tags:
       - developers
@@ -223,8 +227,7 @@ paths:
       tags:
       - developers
       summary: Récupère la liste des secteurs économiques
-      description: "Secteur économique. [https://github.com/betagouv/monstagedeseconde/blob/staging/doc/README.md#secteurs-dactivité
-        ](https://github.com/betagouv/monstagedeseconde/blob/staging/doc/README.md#secteurs-dactivité)"
+      description: "Secteur économique. [https://github.com/betagouv/monstagedeseconde/blob/staging/doc/README.md#secteurs-dactivité](https://github.com/betagouv/monstagedeseconde/blob/staging/doc/README.md#secteurs-dactivité)"
       operationId: sectors
       responses:
         "200":
@@ -252,11 +255,11 @@ components:
       - employer_name
       - is_public
       - max_candidates
-      - period
       - remote_id
       - sector_id
       - street
       - title
+      - period
       type: object
       properties:
         description:
@@ -324,13 +327,9 @@ components:
             longitude: 1
         period:
           type: integer
-          description: Semaines de stage proposées 0 => 2 semaines - du 17 au 28 juin
-            2024; 1 => 1 semaine - du 17 au 21 juin 2024; 2 => 1 semaine - du 24 au
-            28 juin 2024
-          enum:
-          - 0
-          - 1
-          - 2
+          enum: [0,1,2]
+          description: Semaines de stage proposées où 0 => 2 semaines - du 17 au 28 juin 2024; 1 => 1 semaine - du 17 au 21 juin 2024; 2 => 1 semaine - du 24 au 28 juin 2024
+          example: 1
         permalink:
           type: string
           description: Site de l'employeur
@@ -349,10 +348,7 @@ components:
           $ref: '#/components/schemas/Sector'
       description: offre de stage
       example:
-        period:
-        - 0
-        - 1
-        - 2
+        period: 0
         city: Paris
         remote_id: 123
         coordinates:
@@ -488,18 +484,6 @@ components:
         status:
           type: string
           example: unprocessable_entity
-    inline_response_404_1:
-      type: object
-      properties:
-        code:
-          type: string
-          example: NOT_FOUND
-        error:
-          type: string
-          example: can't find internship_offer with this remote_id
-        status:
-          type: string
-          example: not_found
   responses:
     Unauthorized:
       description: l'authentification a échoué
