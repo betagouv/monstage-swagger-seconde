@@ -223,9 +223,8 @@ paths:
       tags:
       - developers
       summary: Récupère la liste des secteurs économiques
-      description: "Secteur économique. [https://github.com/betagouv/monstagedeseconde/blob/staging/doc/README.md#secteurs-dactivité\
-        ](https://github.com/betagouv/monstagedeseconde/blob/staging/doc/README.md#secteurs-dactivité\
-        )"
+      description: "Secteur économique. [https://github.com/betagouv/monstagedeseconde/blob/staging/doc/README.md#secteurs-dactivité
+        ](https://github.com/betagouv/monstagedeseconde/blob/staging/doc/README.md#secteurs-dactivité)"
       operationId: sectors
       responses:
         "200":
