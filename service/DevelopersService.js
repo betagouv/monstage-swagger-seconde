@@ -27,7 +27,7 @@ exports.internship_offers = function(body) {
   "zipcode" : "75001",
   "max_candidates" : 1,
   "employer_website" : "http://www.acnee-corporation.fr",
-  "sector_id" : {
+  "sector_uuid" : {
     "sector_uuid" : "b7564ac4-e184-41c4-a7a9-57233a9d244a",
     "name" : "Mode",
     "id" : 1
@@ -78,7 +78,7 @@ exports.internship_offers_delete = function(remote_id) {
   "zipcode" : "75001",
   "max_candidates" : 1,
   "employer_website" : "http://www.acnee-corporation.fr",
-  "sector_id" : {
+  "sector_uuid" : {
     "sector_uuid" : "b7564ac4-e184-41c4-a7a9-57233a9d244a",
     "name" : "Mode",
     "id" : 1
@@ -128,7 +128,7 @@ exports.internship_offers_index = function() {
   "zipcode" : "75001",
   "max_candidates" : 1,
   "employer_website" : "http://www.acnee-corporation.fr",
-  "sector_id" : {
+  "sector_uuid" : {
     "sector_uuid" : "b7564ac4-e184-41c4-a7a9-57233a9d244a",
     "name" : "Mode",
     "id" : 1
@@ -159,7 +159,7 @@ exports.internship_offers_index = function() {
   "zipcode" : "75001",
   "max_candidates" : 1,
   "employer_website" : "http://www.acnee-corporation.fr",
-  "sector_id" : {
+  "sector_uuid" : {
     "sector_uuid" : "b7564ac4-e184-41c4-a7a9-57233a9d244a",
     "name" : "Mode",
     "id" : 1
@@ -211,7 +211,7 @@ exports.internship_offers_updatte = function(body,remote_id) {
   "zipcode" : "75001",
   "max_candidates" : 1,
   "employer_website" : "http://www.acnee-corporation.fr",
-  "sector_id" : {
+  "sector_uuid" : {
     "sector_uuid" : "b7564ac4-e184-41c4-a7a9-57233a9d244a",
     "name" : "Mode",
     "id" : 1

@@ -256,7 +256,7 @@ components:
       - employer_name
       - is_public
       - max_candidates
-      - sector_id
+      - sector_uuid
       - street
       - title
       - period
@@ -344,7 +344,7 @@ components:
           description: "true si l'offre de stage est issue d'une administration publique,\
             \ false si elle est issue d'une entreprise privée"
           example: true
-        sector_id:
+        sector_uuid:
           $ref: '#/components/schemas/Sector'
       description: offre de stage
       example:
