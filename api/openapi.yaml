@@ -302,7 +302,6 @@ components:
               type: array
               items:
                 type: string
-                example: 9:00
               example:
                 - "9:00"
                 - "18:00"
@@ -310,7 +309,6 @@ components:
               type: array
               items:
                 type: string
-                example: 9:00
               example:
                 - "9:00"
                 - "18:00"
@@ -318,7 +316,6 @@ components:
               type: array
               items:
                 type: string
-                example: 9:00
               example:
                 - "9:00"
                 - "18:00"
@@ -326,7 +323,6 @@ components:
               type: array
               items:
                 type: string
-                example: 9:00
               example:
                 - "9:00"
                 - "18:00"
@@ -334,7 +330,6 @@ components:
               type: array
               items:
                 type: string
-                example: 9:00
               example:
                 - "9:00"
                 - "18:00"
@@ -398,7 +393,6 @@ components:
               type: array
               items:
                 type: string
-                example: 9:00
               example:
                 - "9:00"
                 - "18:00"
@@ -406,7 +400,6 @@ components:
               type: array
               items:
                 type: string
-                example: 9:00
               example:
                 - "9:00"
                 - "18:00"
@@ -414,7 +407,6 @@ components:
               type: array
               items:
                 type: string
-                example: 9:00
               example:
                 - "9:00"
                 - "18:00"
@@ -422,7 +414,6 @@ components:
               type: array
               items:
                 type: string
-                example: 9:00
               example:
                 - "9:00"
                 - "18:00"
@@ -430,7 +421,6 @@ components:
               type: array
               items:
                 type: string
-                example: 9:00
               example:
                 - "9:00"
                 - "18:00"
