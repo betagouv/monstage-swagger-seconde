@@ -256,7 +256,7 @@ components:
       - employer_name
       - is_public
       - max_candidates
-      - sector_uuid
+      - sector_id
       - street
       - title
       - period
@@ -344,7 +344,7 @@ components:
           description: "true si l'offre de stage est issue d'une administration publique,\
             \ false si elle est issue d'une entreprise privée"
           example: true
-        sector_uuid:
+        sector_id:
           $ref: '#/components/schemas/Sector'
       description: offre de stage
       example:
@@ -372,20 +372,20 @@ components:
         permalink: http://www.stagechezemployeur.fr
         daily_hours:
           lundi:
-          - 9:00
-          - 18:00
+            - 9:00
+            - 18:00
           mardi:
-          - 9:00
-          - 18:00
+            - 9:00
+            - 18:00
           mercredi:
-          - 9:00
-          - 18:00
+            - 9:00
+            - 18:00
           jeudi:
-          - 9:00
-          - 18:00
+            - 9:00
+            - 18:00
           vendredi:
-          - 9:00
-          - 18:00
+            - 9:00
+            - 18:00
     InternshipOfferPatch:
       allOf:
       - type: object
