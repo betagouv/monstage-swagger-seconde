@@ -54,9 +54,9 @@ paths:
       tags:
       - developers
       summary: ajoute une offre de stage d'un partenaire aux offres proposées en propre
-        par les équipes monstagedetroisieme.fr
+        par les équipes Mon stage de seconde
       description: |
-        Les offres de stages décrits ci-dessous décrivent les offres réservées aux classes de **troisiemeen REP  ou REP+**, anciennement nommées troisieme générale
+        Les offres de stages décrits ci-dessous décrivent les offres réservées aux classes de **seconde générale et technologique**
       operationId: internship_offers
       requestBody:
         $ref: '#/components/requestBodies/InternshipOffer'
@@ -112,7 +112,7 @@ paths:
       tags:
       - developers
       summary: Supprime une offre de stage d'un partenaire des offres proposées sur
-        le site monstagedetroisieme.fr
+        le site https://stagedeseconde.1jeune1solution.gouv.fr/
       description: |
         Suppression des offres
       operationId: internship_offers_delete
@@ -165,7 +165,7 @@ paths:
       tags:
       - developers
       summary: met à jour une offre de stage d'un partenaire aux offres proposées
-        en propre par les équipes monstagedetroisieme.fr
+        en propre par les équipes Mon stage de seconde
       description: |
         Mise à jour des offres . Possibilité de désactiver son offre en passant le paramètre published_at à null
       operationId: internship_offers_updatte
@@ -295,14 +295,14 @@ components:
             items:
               type: string
           description: Identifiant de l'offre de stage chez le partenaire
-          example: 123
+          example: "A156548-H"
         lunch_break:
           type: string
           description: Horaires de pause déjeuner
           example: 12h-14h
         daily_hours:
           type: object
-          description: Horaires de travail
+          description: Horaires de stage
           example:
             lundi:
             - 9:00
@@ -364,7 +364,7 @@ components:
         max_candidates: 1
         employer_website: http://www.acnee-corporation.fr
         sector_id:
-          sector_uuid: b7564ac4-e184-41c4-a7a9-57233a9d244a
+          sector_uuid: s20
           name: Mode
           id: 1
         street: 16 rue de la paix
@@ -403,13 +403,13 @@ components:
         sector_uuid:
           type: string
           format: uuid
-          example: b7564ac4-e184-41c4-a7a9-57233a9d244a
+          example: s20
         name:
           type: string
           example: Mode
       description: Secteur économique.
       example:
-        sector_uuid: b7564ac4-e184-41c4-a7a9-57233a9d244a
+        sector_uuid: s20
         name: Mode
         id: 1
     inline_response_401:
