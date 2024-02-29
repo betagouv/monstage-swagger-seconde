@@ -125,7 +125,7 @@ paths:
         explode: false
         schema:
           type: string
-          example: remote-123
+          example: "remote-123"
       responses:
         "200":
           description: Offre de stage supprimée
@@ -250,12 +250,12 @@ components:
         $ref: '#/components/schemas/InternshipOffer'
     InternshipOffer:
       required:
+      - remote_id
       - city
       - coordinates
       - employer_name
       - is_public
       - max_candidates
-      - remote_id
       - sector_id
       - street
       - title
@@ -289,11 +289,7 @@ components:
           type: string
           example: http://www.acnee-corporation.fr
         remote_id:
-          type: object
-          additionalProperties:
-            type: array
-            items:
-              type: string
+          type: string
           description: Identifiant de l'offre de stage chez le partenaire
           example: "A156548-H"
         lunch_break:
@@ -305,20 +301,20 @@ components:
           description: Horaires de stage
           example:
             lundi:
-            - 9:00
-            - 18:00
+              - 9:00
+              - 18:00
             mardi:
-            - 9:00
-            - 18:00
+              - 9:00
+              - 18:00
             mercredi:
-            - 9:00
-            - 18:00
+              - 9:00
+              - 18:00
             jeudi:
-            - 9:00
-            - 18:00
+              - 9:00
+              - 18:00
             vendredi:
-            - 9:00
-            - 18:00
+              - 9:00
+              - 18:00
         coordinates:
           type: object
           description: Coordonnées géographiques du lieu de stage
@@ -350,7 +346,7 @@ components:
       example:
         period: 0
         city: Paris
-        remote_id: 123
+        remote_id: "A123-12"
         coordinates:
           latitude: 1
           longitude: 1
@@ -468,7 +464,7 @@ components:
           example: DUPLICATE_WEEKY_FRAMED
         error:
           type: string
-          example: period with this remote_id (123) already exists.
+          example: period with this remote_id ("A123-2") already exists.
         status:
           type: string
           example: conflict
