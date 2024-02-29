@@ -262,6 +262,10 @@ components:
       - period
       type: object
       properties:
+        remote_id:
+          type: string
+          description: Identifiant de l'offre de stage chez le partenaire
+          example: "A156548-H"
         description:
           maxLength: 500
           type: string
@@ -288,10 +292,6 @@ components:
         employer_website:
           type: string
           example: http://www.acnee-corporation.fr
-        remote_id:
-          type: string
-          description: Identifiant de l'offre de stage chez le partenaire
-          example: "A156548-H"
         lunch_break:
           type: string
           description: Horaires de pause déjeuner
@@ -318,9 +318,13 @@ components:
         coordinates:
           type: object
           description: Coordonnées géographiques du lieu de stage
-          example:
-            latitude: 1
-            longitude: 1
+          properties:
+            latitude:
+              type: number
+              example: 48.866667
+            longitude:
+              type: number
+              example: 2.333333
         period:
           type: integer
           enum: [0,1,2]
@@ -344,9 +348,9 @@ components:
           $ref: '#/components/schemas/Sector'
       description: offre de stage
       example:
+        remote_id: "A123-12"
         period: 0
         city: Paris
-        remote_id: "A123-12"
         coordinates:
           latitude: 1
           longitude: 1
@@ -359,7 +363,7 @@ components:
         zipcode: "75001"
         max_candidates: 1
         employer_website: http://www.acnee-corporation.fr
-        sector_id:
+        sector_uuid:
           sector_uuid: s20
           name: Mode
           id: 1
