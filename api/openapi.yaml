@@ -256,7 +256,7 @@ components:
       - employer_name
       - is_public
       - max_candidates
-      - sector_id
+      - sector_uuid
       - street
       - title
       - period
@@ -301,20 +301,45 @@ components:
           description: Horaires de stage
           example:
             lundi:
-              - 9:00
-              - 18:00
+              type: array
+              items:
+                type: string
+                example: "9:00"
+              example:
+                - "9:00"
+                - "18:00"
             mardi:
-              - 9:00
-              - 18:00
+              type: array
+              items:
+                type: string
+                example: "9:00"
+              example:
+                - "9:00"
+                - "18:00"
             mercredi:
-              - 9:00
-              - 18:00
+              type: array
+              items:
+                type: string
+                example: "9:00"
+              example:
+                - "9:00"
+                - "18:00"
             jeudi:
-              - 9:00
-              - 18:00
+              type: array
+              items:
+                type: string
+                example: "9:00"
+              example:
+                - "9:00"
+                - "18:00"
             vendredi:
-              - 9:00
-              - 18:00
+              type: array
+              items:
+                type: string
+                example: "9:00"
+              example:
+                - "9:00"
+                - "18:00"
         coordinates:
           type: object
           description: Coordonnées géographiques du lieu de stage
@@ -344,7 +369,7 @@ components:
           description: "true si l'offre de stage est issue d'une administration publique,\
             \ false si elle est issue d'une entreprise privée"
           example: true
-        sector_id:
+        sector_uuid:
           $ref: '#/components/schemas/Sector'
       description: offre de stage
       example:
