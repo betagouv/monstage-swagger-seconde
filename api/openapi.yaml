@@ -304,40 +304,40 @@ components:
                 type: string
                 example: 9:00
               example:
-              - 9:00
-              - 18:00
+                - "9:00"
+                - "18:00"
             mardi:
               type: array
               items:
                 type: string
                 example: 9:00
               example:
-              - 9:00
-              - 18:00
+                - "9:00"
+                - "18:00"
             mercredi:
               type: array
               items:
                 type: string
                 example: 9:00
               example:
-              - 9:00
-              - 18:00
+                - "9:00"
+                - "18:00"
             jeudi:
               type: array
               items:
                 type: string
                 example: 9:00
               example:
-              - 9:00
-              - 18:00
+                - "9:00"
+                - "18:00"
             vendredi:
               type: array
               items:
                 type: string
                 example: 9:00
               example:
-              - 9:00
-              - 18:00
+                - "9:00"
+                - "18:00"
         coordinates:
           $ref: '#/components/schemas/InternshipOffer_coordinates'
         period:
