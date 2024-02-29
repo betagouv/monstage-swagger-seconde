@@ -297,7 +297,7 @@ components:
         daily_hours:
           type: object
           description: Horaires de stage
-          example:
+          properties:
             lundi:
               type: array
               items:
