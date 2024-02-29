@@ -423,7 +423,6 @@ components:
         sector_uuid:
           type: string
           format: uuid
-          example: s20
         name:
           type: string
           example: Mode
