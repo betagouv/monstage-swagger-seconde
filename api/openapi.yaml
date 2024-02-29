@@ -295,44 +295,7 @@ components:
           description: Horaires de pause déjeuner
           example: 12h-14h
         daily_hours:
-          type: object
-          description: Horaires de stage
-          properties:
-            lundi:
-              type: array
-              items:
-                type: string
-              example:
-                - "9:00"
-                - "18:00"
-            mardi:
-              type: array
-              items:
-                type: string
-              example:
-                - "9:00"
-                - "18:00"
-            mercredi:
-              type: array
-              items:
-                type: string
-              example:
-                - "9:00"
-                - "18:00"
-            jeudi:
-              type: array
-              items:
-                type: string
-              example:
-                - "9:00"
-                - "18:00"
-            vendredi:
-              type: array
-              items:
-                type: string
-              example:
-                - "9:00"
-                - "18:00"
+          $ref: '#/components/schemas/InternshipOffer_daily_hours'
         coordinates:
           $ref: '#/components/schemas/InternshipOffer_coordinates'
         period:
@@ -394,36 +357,36 @@ components:
               items:
                 type: string
               example:
-                - "9:00"
-                - "18:00"
+              - 9:00
+              - 18:00
             mardi:
               type: array
               items:
                 type: string
               example:
-                - "9:00"
-                - "18:00"
+              - 9:00
+              - 18:00
             mercredi:
               type: array
               items:
                 type: string
               example:
-                - "9:00"
-                - "18:00"
+              - 9:00
+              - 18:00
             jeudi:
               type: array
               items:
                 type: string
               example:
-                - "9:00"
-                - "18:00"
+              - 9:00
+              - 18:00
             vendredi:
               type: array
               items:
                 type: string
               example:
-                - "9:00"
-                - "18:00"
+              - 9:00
+              - 18:00
     InternshipOfferPatch:
       allOf:
       - type: object
@@ -441,7 +404,6 @@ components:
         sector_uuid:
           type: string
           format: uuid
-          example: s20
         name:
           type: string
           example: Mode
@@ -544,6 +506,45 @@ components:
           type: number
           example: 2.333333
       description: Coordonnées géographiques du lieu de stage
+    InternshipOffer_daily_hours:
+      type: object
+      properties:
+        lundi:
+          type: array
+          example:
+          - 9:00
+          - 18:00
+          items:
+            type: string
+        mardi:
+          type: array
+          example:
+          - 9:00
+          - 18:00
+          items:
+            type: string
+        mercredi:
+          type: array
+          example:
+          - 9:00
+          - 18:00
+          items:
+            type: string
+        jeudi:
+          type: array
+          example:
+          - 9:00
+          - 18:00
+          items:
+            type: string
+        vendredi:
+          type: array
+          example:
+          - 9:00
+          - 18:00
+          items:
+            type: string
+      description: Horaires de stage
   responses:
     Unauthorized:
       description: l'authentification a échoué

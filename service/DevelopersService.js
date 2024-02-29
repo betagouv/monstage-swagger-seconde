@@ -36,11 +36,45 @@ exports.internship_offers = function(body) {
   "is_public" : true,
   "permalink" : "http://www.stagechezemployeur.fr",
   "daily_hours" : {
-    "lundi" : [ "9:00", "18:00" ],
-    "mardi" : [ "9:00", "18:00" ],
-    "mercredi" : [ "9:00", "18:00" ],
-    "jeudi" : [ "9:00", "18:00" ],
-    "vendredi" : [ "9:00", "18:00" ]
+    "type" : "object",
+    "description" : "Horaires de stage",
+    "properties" : {
+      "lundi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      },
+      "mardi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      },
+      "mercredi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      },
+      "jeudi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      },
+      "vendredi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      }
+    }
   }
 };
     if (Object.keys(examples).length > 0) {
@@ -87,11 +121,45 @@ exports.internship_offers_delete = function(remote_id) {
   "is_public" : true,
   "permalink" : "http://www.stagechezemployeur.fr",
   "daily_hours" : {
-    "lundi" : [ "9:00", "18:00" ],
-    "mardi" : [ "9:00", "18:00" ],
-    "mercredi" : [ "9:00", "18:00" ],
-    "jeudi" : [ "9:00", "18:00" ],
-    "vendredi" : [ "9:00", "18:00" ]
+    "type" : "object",
+    "description" : "Horaires de stage",
+    "properties" : {
+      "lundi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      },
+      "mardi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      },
+      "mercredi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      },
+      "jeudi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      },
+      "vendredi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      }
+    }
   }
 };
     if (Object.keys(examples).length > 0) {
@@ -137,11 +205,45 @@ exports.internship_offers_index = function() {
   "is_public" : true,
   "permalink" : "http://www.stagechezemployeur.fr",
   "daily_hours" : {
-    "lundi" : [ "9:00", "18:00" ],
-    "mardi" : [ "9:00", "18:00" ],
-    "mercredi" : [ "9:00", "18:00" ],
-    "jeudi" : [ "9:00", "18:00" ],
-    "vendredi" : [ "9:00", "18:00" ]
+    "type" : "object",
+    "description" : "Horaires de stage",
+    "properties" : {
+      "lundi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      },
+      "mardi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      },
+      "mercredi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      },
+      "jeudi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      },
+      "vendredi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      }
+    }
   }
 }, {
   "remote_id" : "A123-12",
@@ -168,11 +270,45 @@ exports.internship_offers_index = function() {
   "is_public" : true,
   "permalink" : "http://www.stagechezemployeur.fr",
   "daily_hours" : {
-    "lundi" : [ "9:00", "18:00" ],
-    "mardi" : [ "9:00", "18:00" ],
-    "mercredi" : [ "9:00", "18:00" ],
-    "jeudi" : [ "9:00", "18:00" ],
-    "vendredi" : [ "9:00", "18:00" ]
+    "type" : "object",
+    "description" : "Horaires de stage",
+    "properties" : {
+      "lundi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      },
+      "mardi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      },
+      "mercredi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      },
+      "jeudi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      },
+      "vendredi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      }
+    }
   }
 } ];
     if (Object.keys(examples).length > 0) {
@@ -220,11 +356,45 @@ exports.internship_offers_updatte = function(body,remote_id) {
   "is_public" : true,
   "permalink" : "http://www.stagechezemployeur.fr",
   "daily_hours" : {
-    "lundi" : [ "9:00", "18:00" ],
-    "mardi" : [ "9:00", "18:00" ],
-    "mercredi" : [ "9:00", "18:00" ],
-    "jeudi" : [ "9:00", "18:00" ],
-    "vendredi" : [ "9:00", "18:00" ]
+    "type" : "object",
+    "description" : "Horaires de stage",
+    "properties" : {
+      "lundi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      },
+      "mardi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      },
+      "mercredi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      },
+      "jeudi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      },
+      "vendredi" : {
+        "type" : "array",
+        "items" : {
+          "type" : "string"
+        },
+        "example" : [ "9:00", "18:00" ]
+      }
+    }
   }
 };
     if (Object.keys(examples).length > 0) {
