@@ -357,36 +357,36 @@ components:
               items:
                 type: string
               example:
-              - 9:00
-              - 18:00
+              - "9:00"
+              - "18:00"
             mardi:
               type: array
               items:
                 type: string
               example:
-              - 9:00
-              - 18:00
+              - "9:00"
+              - "18:00"
             mercredi:
               type: array
               items:
                 type: string
               example:
-              - 9:00
-              - 18:00
+              - "9:00"
+              - "18:00"
             jeudi:
               type: array
               items:
                 type: string
               example:
-              - 9:00
-              - 18:00
+              - "9:00"
+              - "18:00"
             vendredi:
               type: array
               items:
                 type: string
               example:
-              - 9:00
-              - 18:00
+              - "9:00"
+              - "18:00"
     InternshipOfferPatch:
       allOf:
       - type: object
@@ -512,36 +512,36 @@ components:
         lundi:
           type: array
           example:
-          - 9:00
-          - 18:00
+          - "9:00"
+          - "18:00"
           items:
             type: string
         mardi:
           type: array
           example:
-          - 9:00
-          - 18:00
+          - "9:00"
+          - "18:00"
           items:
             type: string
         mercredi:
           type: array
           example:
-          - 9:00
-          - 18:00
+          - "9:00"
+          - "18:00"
           items:
             type: string
         jeudi:
           type: array
           example:
-          - 9:00
-          - 18:00
+          - "9:00"
+          - "18:00"
           items:
             type: string
         vendredi:
           type: array
           example:
-          - 9:00
-          - 18:00
+          - "9:00"
+          - "18:00"
           items:
             type: string
       description: Horaires de stage
