@@ -218,6 +218,49 @@ paths:
       security:
       - bearerAuth: []
       x-swagger-router-controller: Developers
+  /internship_offers/search:
+    get:
+      tags:
+        - developers
+      summary: Recherche des offres de stage
+      description: Recherche des offres de stage déposées par le partenaire.
+
+      parameters:
+        - in: query
+          name: latitude
+          schema:
+            type: number
+          required: false
+          example: 48.8566
+        - in: query
+          name: longitude
+          schema:
+            type: number
+          required: false
+          example: 2.3522
+        - in: query
+          name: radius
+          schema:
+            type: integer
+          required: false
+          example: 40000
+        - in: query
+          name: keyword
+          schema:
+            type: string
+          required: false
+          example: "Game designer"
+
+      responses:
+        '200':
+          description: Offres de stages du partenaire
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternshipOffers'
+      security:
+      - bearerAuth: []
+      x-swagger-router-controller: Developers
   /sectors:
     get:
       tags:
